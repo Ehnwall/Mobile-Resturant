@@ -1,0 +1,21 @@
+:root {
+    /* Color-scheme for site*/
+    --text: #110403;
+    --background: #fdf3f2;
+    --primary: #dc392e;
+    --secondary: #8eecae;
+    --accent: #56d3e3;
+
+    /* Fonts for site*/
+    --header-font: ;
+    --body-font: ;
+    --footer-font: ;
+
+    /*Padding for site*/
+
+    /* Margin for site*/
+}
+
+.container {
+    max-width: 100vw;
+}
