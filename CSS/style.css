@@ -40,7 +40,7 @@ body {
 	margin-bottom: 0.41rem;
    
 }
-
+/*home and price in header*/
 .middle-a-links-nav {
     display: flex;
     justify-content: space-around;
@@ -49,6 +49,7 @@ body {
 	top: 0.5rem;
 	
 }
+/*Loggan*/
 .middle-a-links-nav img {
     background: var(--primary);
     border-radius: 0.3rem;
@@ -73,12 +74,6 @@ body {
   color: orange;
   cursor: pointer;
 }
- 
-  .bg-for-nav-under {
-	height: 9.5rem;
-	background-color: var(--primary);
-	z-index: -1;
-}
 
   .menu, .pris  {
 	letter-spacing: 0.1rem;
@@ -101,7 +96,16 @@ body {
 	color: orange;
 }
 
+.list-style {
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  gap: 1.4em;
+  
+}
+
   .list-style li a{
+    padding: 0.2rem;
+    border-radius: 0.3rem;
     font-family: "poppins";
 	text-decoration: none;
 	color: var(--text);
@@ -110,17 +114,15 @@ body {
 }
 
    .list-style li a:hover {
-	transition: all 0.6s ease;
-	--background: var(--primary);
-	--text: var(--accent);
+	 transition: all 0.6s ease;
+   background-color: var(--primary);
+   color: var(--secondary);
 }
 
   .toggle-function-menu{
 	display: none;
-
 }
   .toggle-function-menu.open {
-	margin-top:1rem 0 0 1rem;
 	height: 15rem;
 	--text: #130e01;
 	--background: #fffaeb;;
@@ -128,31 +130,58 @@ body {
     justify-content: center;
     align-items: center;
     list-style: none;
-	z-index: 10;
 	border-radius: 0 0 10px 10px;
 	border-bottom: 5px solid var(--primary);
     
   }
 
-  @media (max-width: 375px) {
-	.menu, .pris {
-		display: none;
-	}
 
+  @media (max-width: 431px) {
+    .list-style {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto;
+     gap: 0.5rem;
+    }
+  }
+  @media (max-width: 376px) {
+    .list-style {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 auto;
+     gap: 0.5rem;
+    }
     .fa-solid {
         color: var(--text);
     }
-
 	.middle-a-links-nav img {
 		width: 4rem;	
 		transition: all 3s ease;
 	} 
-
     .list-style li a {
         font-size: 10px;
     }
   }
-
+  @media (max-width: 320px) {
+  .menu, .pris  {
+   display: none;
+  }
+  .list-style {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+   gap: 0.5rem;
+  }
+  .fa-solid {
+    font-size: 20px;
+  }
+  .fa-xmark {
+    margin-right: 5rem;
+  }
+  .middle-a-links-nav img {
+		margin-right: 0.5rem;
+	} 
+  }
   /******************************************************
   end to open and close menu style code for the navbar
  ******************************************************/	
