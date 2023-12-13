@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Poppins:wght@700;900&display=swap');
 :root {
     /* Color-scheme for site*/
-    --text: #110403;
-    --background: #fdf3f2;
-    --primary: #dc392e;
-    --secondary: #8eecae;
-    --accent: #56d3e3;
+    --text: #130e01;
+    --background: #fffaeb;
+    --primary: #ff8400;
+    --secondary: #fff5d6;
+    --accent: #cf4307;
 
     /* Fonts for site*/
-    --header-font: ;
-    --body-font: ;
-    --footer-font: ;
+    --header-font: 'Poppins';
+    --body-font: 'Manrope';
+    --footer-font: 'Manrope';
 
     /*Padding for site*/
 
