@@ -25,14 +25,10 @@
 }
 
 .information,
-.offerings,
 .support {
     color: var(--text);
     padding-block: 2rem;
     font-family: var(--body-font);
-    font-weight: 500;
-    font-size: small;
-    font-family: var(--footer-font);
     line-height: 2rem;
     max-width: 100vw;
     display: flex;
@@ -40,6 +36,14 @@
     flex-direction: column;
 }
 
+.offerings {
+    padding-inline: 2rem;
+    gap: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    letter-spacing: 0.1rem;
+}
 .some {
     display: flex;
     justify-content: center;
