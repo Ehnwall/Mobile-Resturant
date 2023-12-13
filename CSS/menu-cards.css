@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500&family=Poppins:wght@700;900&display=swap');
+:root {
+    /* Color-scheme for site*/
+    --text: #130e01;
+    --background: #fffaeb;
+    --primary: #ff8400;
+    --secondary: #fff5d6;
+    --accent: #cf4307;
+
+    /* Fonts for site*/
+    --header-font: 'Poppins';
+    --body-font: 'Manrope';
+    --footer-font: 'Manrope';
+
+    /*Padding for site*/
+
+    /* Margin for site*/
+}
+
+header {
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.menu {
+    background-color: var(--background);
+    color: var(--text);
+    font-family: var(--body-font);
+}
+
+.menu-header-each-section {
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2rem;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.bbq-menu-cards-container {
+    margin-inline: 0.5rem;
+    display: grid;
+    border-radius: 0.2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.bbq-menu-card {
+    background-color: var(--secondary);
+    padding: 0.5rem;
+    position: relative;
+}
+.bbq-menu-card > img {
+    border-radius: 1rem;
+}
+.btn-add-to-cart {
+    width: 6rem;
+    height: 2rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 0.3rem;
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
