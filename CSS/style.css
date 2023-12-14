@@ -17,10 +17,6 @@
     /* Margin for site*/
 }
 
-.body {
-    background-color: var(--background);
-}
-
 /*************************************************************
   start for the open and close menu style code for the navbar
  ************************************************************/
@@ -273,6 +269,10 @@
     gap: 1rem;
     font-family: var(--body-font);
 }
+
+/* ------- OM OSS END ------*/
+
+/* ------- CONTACT US START ------*/
 .container-contact-form {
     display: flex;
     flex-direction: column;
@@ -285,20 +285,10 @@
     gap: 1rem;
 }
 
-.container-sendt {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 .container-contact-form > input {
     padding: 5px 15px;
     border: 1px solid var(--accent);
     border-radius: 5px;
-}
-.hidden-sent {
-    display: none;
 }
 
 .form-disabled {
@@ -306,9 +296,6 @@
     font-size: 0.8rem;
 }
 
-.hidden-text {
-    display: none;
-}
 .text-input {
     height: 5rem;
 }
@@ -321,11 +308,8 @@ textarea {
     border-radius: 5px;
     resize: vertical;
 }
+/* ------- CONTACT US START ------*/
 
-.hidden-form {
-    display: none;
-}
-/* ------- OM OSS END ------*/
 /* ------- FOOTER STARTS ------*/
 
 .information,
