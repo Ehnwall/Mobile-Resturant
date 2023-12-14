@@ -29,7 +29,7 @@ const createCard = (foodInfo) => {
     const menuCardPrice = document.createElement(`p`);
     const strongPrice = document.createElement(`strong`);
     strongPrice.textContent = `Pris: `;
-    menuCardPrice.append(strongPrice, foodInfo.price, `kr`);
+    menuCardPrice.append(strongPrice, foodInfo.price, ` kr`);
 
     const menuCardCountry = document.createElement(`p`);
     const strongCountry = document.createElement(`strong`);

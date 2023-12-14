@@ -337,6 +337,7 @@
 }
 
 .menu-card {
+    border-radius: 1rem;
     background-color: var(--secondary);
     padding: 0.5rem;
     position: relative;
