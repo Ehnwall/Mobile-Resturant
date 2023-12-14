@@ -22,6 +22,142 @@
 }
 
 /*************************************************************
+  start for the open and close menu for the cart
+ ************************************************************/
+
+.cart-container {
+    width: 100vw;
+    max-width: 60rem;
+    margin: auto;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform 0.5s;
+    padding-top: 30rem;
+    position: sticky;
+}
+
+.listProduct .item img {
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+
+.listProduct {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.listProduct .item {
+    background-color: #eeeee6;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.listProduct .item h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+.listProduct .item button {
+    background-color: #353432;
+    color: #eeeee6;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.cartTab {
+    height: 30rem;
+    width: 20rem;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    inset: 0 -400px 0 auto;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    transition: 0.5s;
+    margin-top: 5rem;
+    padding: 20px 0;
+}
+
+body.showCart .cartTab {
+    inset: 0 0 0 auto;
+}
+
+.cartTab h1 {
+    font-size: 3rem;
+    margin-top: 1rem;
+    background-color: var(--primary);
+    border-radius: 0.3rem;
+    padding: 0.4rem;
+    margin: 0.4rem;
+}
+
+.cartTab .listCart .item img {
+    width: 100%;
+}
+
+.cartTab .listCart .item {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart,
+.amount,
+.name {
+    font-size: 1.1rem;
+}
+.listCart .amount span {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #eee;
+    color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.listCart .amount span:nth-child(2) {
+    background-color: transparent;
+    color: #eee;
+}
+
+.listCart .item:nth-child(even) {
+    background-color: #eee1;
+}
+
+.listCart {
+    overflow: auto;
+}
+
+.listCart::-webkit-scrollbar {
+    width: 0;
+}
+
+.btn-input .table-num {
+    width: 3.1rem;
+    height: 2.2rem;
+    border-radius: 0.3rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    text-align: center;
+    border: none;
+}
+.order {
+    width: 6.1rem;
+    height: 2.2rem;
+    border-radius: 0.3rem;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-weight: 600;
+    border: none;
+    margin-top: 0, 7rem;
+}
+/*************************************************************
   start for the open and close menu style code for the navbar
  ************************************************************/
 
@@ -48,7 +184,7 @@
     width: 6rem;
     padding: 0.5rem;
     height: auto;
-    z-index: 100;
+    z-index: 10;
     position: absolute;
 }
 
@@ -117,13 +253,20 @@
 }
 .toggle-function-menu.open {
     height: 13rem;
-
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
     border-radius: 0 0 0.625rem 0.625rem;
     border-bottom: 0.3rem solid var(--primary);
+}
+
+@media (min-width: 900px) {
+    .cartTab {
+        height: 45rem;
+        width: 40rem;
+        inset: 0 -900px 0 auto;
+    }
 }
 
 @media (max-width: 431px) {
@@ -135,6 +278,32 @@
     }
 }
 @media (max-width: 376px) {
+    .cartTab .listCart .item {
+        width: 19.6rem;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 2fr;
+        gap: 0.2rem;
+        text-align: center;
+        align-items: center;
+    }
+
+    .cartTab h1 {
+        font-size: 1.5rem;
+        margin-top: 1rem;
+        background-color: var(--primary);
+        border-radius: 0.3rem;
+        padding: 0.2rem;
+        margin: 0.2rem;
+    }
+    .cartTab {
+        height: 36rem;
+        width: 20rem;
+    }
+
+    .cartTab h4 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
     .list-style {
         display: grid;
         grid-template-columns: repeat(3, 1fr);

@@ -15,9 +15,10 @@
         <link rel="stylesheet" href="CSS/style.css" />
         <script src="JS/app.js" defer></script>
     </head>
-    <body>
+    <body class="">
         <!--navigation and button for toggle-->
         <!--this is then fa-solid from font awesome which is hamburger menu and the cross also shopping cart icons-->
+
         <header>
             <div class="navbar">
                 <div class="middle-a-links-nav">
@@ -32,7 +33,7 @@
 
                     <a href="#" class="menu">Price</a>
                     <i
-                        class="fa-solid fa-cart-shopping"
+                        class="icon-cart fa-solid fa-cart-shopping"
                         style="color: #130e01"></i>
                 </div>
             </div>
@@ -59,7 +60,36 @@
         </header>
         <!--end for the header-->
 
-        <main class="container"></main>
+        <section class="cart-container">
+            <section class="cartTab">
+                <div class="close">
+                    <i class="fa-solid fa-xmark" style="color: #fffaeb"></i>
+                    <h1>Order here</h1>
+                </div>
+
+                <div class="listCart">
+                    <div class="item">
+                        <div class="image">
+                            <img
+                                src="./assets/all-states-bbq-high-resolution-logo-transparent.png"
+                                alt="" />
+                        </div>
+                        <div class="name">Name</div>
+                        <div class="totalPrice">$200</div>
+                        <div class="amount">
+                            <span class="minus"><</span>
+                            <span>0</span>
+                            <span class="plus">></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-input">
+                    <h4>write your table number here</h4>
+                    <input type="number" class="table-num" />
+                    <button class="order">Order here</button>
+                </div>
+            </section>
+        </section>
 
         <script src="app.js"></script>
     </body>
