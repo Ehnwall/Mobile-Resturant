@@ -318,15 +318,6 @@
 
 /* CSS for menu site -- Alvin */
 
-.temporary-navbar {
-    height: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
-}
-
 .menu-header {
     background-color: var(--primary);
     display: flex;
