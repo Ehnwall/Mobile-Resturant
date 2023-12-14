@@ -341,7 +341,7 @@
     padding: 0.5rem;
     position: relative;
 }
-.bbq-menu-card > img {
+.menu-card > img {
     border-radius: 1rem;
     object-fit: cover;
 }
