@@ -81,12 +81,14 @@ console.log(db);
 const nextPageButton = document.querySelector('.next-page');
 nextPageButton.addEventListener('click', () => {
     currentPage++;
+    document.getElementById('title').scrollIntoView(); //scroll to the top of the page
     updatePage();
 });
 
 const prevPageButton = document.querySelector('.prev-page');
 prevPageButton.addEventListener('click', () => {
     currentPage--;
+    document.getElementById('title').scrollIntoView(); //scroll to the top of the page
     updatePage();
 });
 console.log(createCard(test));
