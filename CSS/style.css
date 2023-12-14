@@ -235,6 +235,7 @@
     color: var(--_textColor);
     background-color: var(--_backgroundColor);
     transition: background 0.2s ease-in-out;
+    border: 0;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
         rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
@@ -244,6 +245,12 @@
 .btn-primary {
     --_backgroundColor: var(--primary);
     --_textColor: var(--background);
+}
+.btn-paginate {
+    --_backgroundColor: var(--accent);
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    border-radius: 0.25rem;
 }
 /* --------- BUTTON END --------- */
 
@@ -273,7 +280,6 @@
     gap: 1rem;
     font-family: var(--body-font);
 }
-
 /* ------- OM OSS END ------*/
 /* ------- FOOTER STARTS ------*/
 
@@ -321,7 +327,7 @@
     color: white;
 }
 
-.menu-header-each-section {
+.menu-header {
     background-color: var(--primary);
     display: flex;
     justify-content: center;
@@ -357,4 +363,10 @@
     position: absolute;
     bottom: 1.5rem;
     right: 1.5rem;
+}
+.paginaton-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 0.5rem;
+    margin-block: 1rem;
 }
