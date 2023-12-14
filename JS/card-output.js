@@ -9,8 +9,8 @@ const paginate = (array, pageNumber, pageSize) => {
     return array.slice(startIndex, startIndex + pageSize);
 };
 
+// Adds div elements with information for all dishes
 const createCard = (foodInfo) => {
-    // create new div with class menu-card
     const menuCardDiv = document.createElement('div');
     menuCardDiv.classList.add('menu-card');
 
@@ -25,7 +25,6 @@ const createCard = (foodInfo) => {
     const strongInfo = document.createElement(`strong`);
     strongInfo.textContent = `Info: `;
     menuCardInfo.append(strongInfo, foodInfo.dsc);
-    // menuCardInfo.textContent = foodInfo.dsc;
 
     const menuCardPrice = document.createElement(`p`);
     const strongPrice = document.createElement(`strong`);
