@@ -7,7 +7,7 @@
         <link rel="stylesheet" href="../CSS/style.css" />
         <link rel="stylesheet" href="../CSS/reset.css" />
         <script src="../JS/db.js"></script>
-        <script src="../JS/card-output.js"></script>
+        <script src="../JS/card-output.js" defer></script>
         <!-- <script src="../JS/app.js"></script> uncomment when navigation is in place -->
     </head>
     <body>
@@ -15,7 +15,7 @@
         <header class="temporary-navbar">Kalles-Header/navbar</header>
         <main>
             <!-- Header for BBQ menu -->
-            <h3 class="menu-header-each-section">BBQs</h3>
+            <h3 class="menu-header">BBQs</h3>
             <!-- Container for menu cards -->
             <section class="menu-cards-container">
                 <!-- Will be created in javascript -->
@@ -35,6 +35,10 @@
                 </div>
                 <!-- ^^^^^^^^^^^^^^^^^^^^ -->
             </section>
+            <div class="paginaton-buttons">
+                <button class="btn btn-paginate prev-page">Föregående</button>
+                <button class="btn btn-paginate next-page">Nästa</button>
+            </div>
         </main>
         <footer></footer>
     </body>

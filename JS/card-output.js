@@ -1,4 +1,10 @@
-const paginte = (array, pageNumber, pageSize) => {
+let currentPage = 1;
+let currentCategory = 'our-foods';
+const amountOfCards = 9;
+
+const title = document.querySelector('.menu-header');
+
+const paginate = (array, pageNumber, pageSize) => {
     const startIndex = (pageNumber - 1) * pageSize;
     return array.slice(startIndex, startIndex + pageSize);
 };
@@ -20,3 +26,37 @@ const createCard = (foodInfo) => {
         <button class="btn-add-to-cart">foodInfo</button>
     </div> */
 };
+
+const updatePage = () => {
+    const pageData = paginate(
+        db[`${currentCategory}`],
+        currentPage,
+        amountOfCards
+    );
+    const cardsContainer = document.querySelector('.menu-cards-container');
+    // cardsContainer.innerHTML = '';
+    title.textContent = currentCategory;
+
+    for (let food of pageData) {
+        // const card = createCard(food);
+        // cardsContainer.appendChild(card);
+    }
+};
+
+updatePage();
+
+console.log(db);
+
+const nextPageButton = document.querySelector('.next-page');
+nextPageButton.addEventListener('click', () => {
+    currentPage++;
+    console.log(currentPage);
+    updatePage();
+});
+
+const prevPageButton = document.querySelector('.prev-page');
+prevPageButton.addEventListener('click', () => {
+    currentPage--;
+    console.log(currentPage);
+    updatePage();
+});
