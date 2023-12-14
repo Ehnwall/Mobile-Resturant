@@ -1,6 +1,7 @@
 let currentPage = 1;
-let currentCategory = 'our-foods';
+let currentCategory = 'best-foods';
 const amountOfCards = 9;
+let maxPageination = 0;
 
 const title = document.querySelector('.menu-header');
 
@@ -15,6 +16,7 @@ const createCard = (foodInfo) => {
     menuCardDiv.classList.add('menu-card');
 
     const menuCardImg = document.createElement(`img`);
+    // kolla ifall bilden finns eller inte?
     menuCardImg.src = foodInfo.img;
     menuCardImg.alt = foodInfo.name;
 
@@ -58,6 +60,7 @@ const createCard = (foodInfo) => {
 };
 
 const updatePage = () => {
+    maxPageination = Math.ceil(db[`${currentCategory}`].length / amountOfCards);
     const pageData = paginate(
         db[`${currentCategory}`],
         currentPage,
@@ -75,19 +78,28 @@ const updatePage = () => {
 
 updatePage();
 
-console.log(db);
-
 const nextPageButton = document.querySelector('.next-page');
 nextPageButton.addEventListener('click', () => {
-    currentPage++;
-    document.getElementById('title').scrollIntoView(); //scroll to the top of the page
-    updatePage();
+    if (currentPage < maxPageination) {
+        currentPage++;
+        document.getElementById('title').scrollIntoView(); //scroll to the top of the page
+        updatePage();
+    }
 });
 
 const prevPageButton = document.querySelector('.prev-page');
 prevPageButton.addEventListener('click', () => {
-    currentPage--;
-    document.getElementById('title').scrollIntoView(); //scroll to the top of the page
-    updatePage();
+    if (currentPage > 1) {
+        currentPage--;
+        document.getElementById('title').scrollIntoView(); //scroll to the top of the page
+        updatePage();
+    }
 });
-console.log(createCard(test));
+
+const categories = document.querySelectorAll('.list-style > li > a');
+for (let category of categories) {
+    category.addEventListener('click', () => {
+        currentCategory = category.textContent.toLowerCase();
+        updatePage();
+    });
+}
