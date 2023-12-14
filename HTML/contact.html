@@ -6,55 +6,76 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../CSS/reset.css" />
         <link rel="stylesheet" href="../CSS/style.css" />
-
-        <script src="../JS/app.js"></script>
-        <script
-            src="https://kit.fontawesome.com/7c9761decf.js"
-            crossorigin="anonymous"></script>
+        <script src="../JS/app.js" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
         <title>Contact page</title>
     </head>
     <body>
-        <!-- Add navigation here -->
-        <main>
-            <div class="container-sendt hidden-sent">
-                <i class="fa-solid fa-check" style="color: #1f5135"></i>
-                <h4>Tack!</h4>
-                <h4>Vi svarar dig så fort vi kan!</h4>
+        <header>
+            <div class="navbar">
+                <div class="middle-a-links-nav">
+                    <div class="toggle-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <a href="/index.html" class="pris">Home</a>
+
+                    <img
+                        src="../assets/all-states-bbq-high-resolution-logo-transparent.png" />
+                    <!--this is the logo img-->
+
+                    <a href="#" class="menu">Price</a>
+                    <i
+                        class="fa-solid fa-cart-shopping"
+                        style="color: #130e01"></i>
+                </div>
             </div>
+            <!--and is the menu that comes down when you press the hamburger menu-->
+            <section class="toggle-function-menu">
+                <div class="list-style">
+                    <li><a href="#">Bbqs</a></li>
+                    <li><a href="#">Best-foods</a></li>
+                    <li><a href="#">Breads</a></li>
+                    <li><a href="#">Burgers</a></li>
+                    <li><a href="#">Chocolates</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">Drinks</a></li>
+                    <li><a href="#">Fried-chicken</a></li>
+                    <li><a href="#">Ice-cream</a></li>
+                    <li><a href="#">Pizzas</a></li>
+                    <li><a href="#">Porks</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Sausages</a></li>
+                    <li><a href="#">Steaks</a></li>
+                    <li><a href="#">our-foods</a></li>
+                </div>
+            </section>
+        </header>
+        <!--end for the header-->
+        <main>
             <form action="#" method="post" class="container-contact-form">
-                <input
-                    type="text"
-                    placeholder="Förnamn"
-                    class="required"
-                    required />
-                <input
-                    type="text"
-                    placeholder="Efternamn"
-                    class="required"
-                    required />
-                <input
-                    type="number"
-                    placeholder="Telefon"
-                    class="required"
-                    required />
-                <input
-                    type="email"
-                    placeholder="Mailadress"
-                    class="required"
-                    required />
+                <input type="text" placeholder="Förnamn" required />
+                <input type="text" placeholder="Efternamn" required />
+                <input type="number" placeholder="Telefon" required />
+                <input type="email" placeholder="Mailadress" required />
                 <textarea
                     name="text-input"
                     id="text-input"
                     cols="30"
                     rows="5"
                     placeholder="Text..."
-                    class="required"></textarea>
+                    required></textarea>
                 <button
                     type="submit"
                     name="Skicka"
                     class="btn"
                     id="skicka-form"
-                    value="Skicka">
+                    value="Skicka"
+                    disabled>
                     Skicka
                 </button>
             </form>
