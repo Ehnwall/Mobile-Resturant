@@ -17,14 +17,8 @@
     /* Margin for site*/
 }
 
-
-
-body {
-	box-sizing: border-box;
-	list-style-type:none ;	
-}
 .container {
-  max-width: 100vw;
+    max-width: 100vw;
 }
 
 /*************************************************************
@@ -33,21 +27,19 @@ body {
 
 .navbar {
     width: 100vw;
-    font-family:'Poppins';
-	background: var(--background);
-	color: var(--text);
+    font-family: var(--header-font);
+    background: var(--background);
+    color: var(--text);
     padding: 1rem;
-	margin-bottom: 0.41rem;
-   
+    margin-bottom: 0.41rem;
 }
 /*home and price in header*/
 .middle-a-links-nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-	font-weight: 400;
-	top: 0.5rem;
-	
+    font-weight: 400;
+    top: 0.5rem;
 }
 /*Loggan*/
 .middle-a-links-nav img {
@@ -61,7 +53,7 @@ body {
 }
 
 .fa-xmark {
-	font-size: 19px;
+    font-size: 1.1875rem;
 }
 .fa-solid {
     color: var(--text);
@@ -70,118 +62,117 @@ body {
     align-items: center;
     flex-direction: column;
 }
-  .fa-solid:hover {
-  color: var(--primary);
-  cursor: pointer;
+.fa-solid:hover {
+    color: var(--primary);
+    cursor: pointer;
 }
 
-  .menu, .pris  {
-	letter-spacing: 0.1rem;
-	font-size: 23px;
-	text-decoration: none;
+.menu,
+.pris {
+    letter-spacing: 0.1rem;
+    font-size: 1.4375rem;
+    text-decoration: none;
 }
 
 .pris {
-	margin-right: 3rem;
+    margin-right: 3rem;
 }
 
 .menu {
-	margin-left: 3rem;
+    margin-left: 3rem;
 }
 
-  .pris:hover {
-	color: var(--primary);
+.pris:hover {
+    color: var(--primary);
 }
-  .menu:hover {
-	color: var(--primary);
+.menu:hover {
+    color: var(--primary);
 }
 
 .list-style {
-  display: grid;
-  grid-template-columns: repeat(4, 3fr);
-  gap: 1.4em;
-  
+    display: grid;
+    grid-template-columns: repeat(4, 3fr);
+    gap: 1.4em;
+    margin: 0.1rem;
 }
 
-  .list-style li a{
+.list-style li a {
     padding: 0.2rem;
     border-radius: 0.3rem;
-    font-family: "poppins";
-	text-decoration: none;
-	color: var(--text);
-	font-size: 14px;
-	letter-spacing: 0.1rem;	
+    font-family: 'poppins';
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.875rem;
+    letter-spacing: 0.1rem;
 }
 
-   .list-style li a:hover {
+.list-style li a:hover {
     transition: all 0.6s ease;
-   background-color: var(--primary);
-   color: var(--secondary);
+    background-color: var(--primary);
+    color: var(--secondary);
 }
 
-  .toggle-function-menu{
-	display: none;
+.toggle-function-menu {
+    display: none;
 }
-  .toggle-function-menu.open {
-	height: 15rem;
-	--text: #130e01;
-	--background: #fffaeb;;
+.toggle-function-menu.open {
+    height: 13rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-	border-radius: 0 0 10px 10px;
-	border-bottom: 5px solid var(--primary);
-    
-  }
+    border-radius: 0 0 0.625rem 0.625rem;
+    border-bottom: 0.3rem solid var(--primary);
+}
 
-
-  @media (max-width: 431px) {
+@media (max-width: 431px) {
     .list-style {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin: 0 auto;
-     gap: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        gap: 0.5rem;
     }
-  }
-  @media (max-width: 376px) {
+}
+@media (max-width: 376px) {
     .list-style {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      margin: 0 auto;
-     gap: 0.5rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 auto;
+        gap: 0.5rem;
     }
     .fa-solid {
         color: var(--text);
     }
-	.middle-a-links-nav img {
-		width: 4rem;	
-		transition: all 3s ease;
-	} 
-    .list-style li a {
-        font-size: 10px;
+    .middle-a-links-nav img {
+        width: 4rem;
+        transition: all 3s ease;
     }
-  }
-  @media (max-width: 320px) {
-  .menu, .pris  {
-   display: none;
-  }
-  .list-style {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-   gap: 0.5rem;
-  }
-  .fa-solid {
-    font-size: 20px;
-  }
-  .fa-xmark {
-    margin-right: 5rem;
-  }
-  .middle-a-links-nav img {
-		margin-right: 0.5rem;
-	} 
-  }
-  /******************************************************
+    .list-style li a {
+        font-size: 0.625rem;
+    }
+}
+@media (max-width: 320px) {
+    .menu,
+    .pris {
+        display: none;
+    }
+    .list-style {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0 auto;
+        gap: 0.5rem;
+    }
+    .fa-solid {
+        font-size: 1.25rem;
+    }
+    .fa-xmark {
+        margin-right: 5rem;
+    }
+    .middle-a-links-nav img {
+        margin-right: 0.5rem;
+    }
+}
+/******************************************************
   end to open and close menu style code for the navbar
- ******************************************************/	
+ ******************************************************/
