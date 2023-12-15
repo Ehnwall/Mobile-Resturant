@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Menu BBQs</title>
+        <link rel="stylesheet" href="../CSS/style.css" />
+        <link rel="stylesheet" href="../CSS/reset.css" />
+        <script src="../JS/db.js"></script>
+        <script src="../JS/card-output.js" defer></script>
+        <script src="../JS/app.js" defer></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <!--navigation and button for toggle-->
+        <!--this is then fa-solid from font awesome which is hamburger menu and the cross also shopping cart icons-->
+        <header>
+            <div class="navbar">
+                <div class="middle-a-links-nav">
+                    <div class="toggle-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                    <a href="#" class="pris">Home</a>
+
+                    <img
+                        src="../assets/all-states-bbq-high-resolution-logo-transparent.png" />
+                    <!--this is the logo img-->
+
+                    <a href="#" class="menu">Price</a>
+                    <i
+                        class="fa-solid fa-cart-shopping"
+                        style="color: #130e01"></i>
+                </div>
+            </div>
+            <!--and is the menu that comes down when you press the hamburger menu-->
+            <section class="toggle-function-menu">
+                <div class="list-style">
+                    <li><a href="#">Bbqs</a></li>
+                    <li><a href="#">Best-foods</a></li>
+                    <li><a href="#">Breads</a></li>
+                    <li><a href="#">Burgers</a></li>
+                    <li><a href="#">Chocolates</a></li>
+                    <li><a href="#">Desserts</a></li>
+                    <li><a href="#">Drinks</a></li>
+                    <li><a href="#">Fried-chicken</a></li>
+                    <li><a href="#">Ice-cream</a></li>
+                    <li><a href="#">Pizzas</a></li>
+                    <li><a href="#">Porks</a></li>
+                    <li><a href="#">Sandwiches</a></li>
+                    <li><a href="#">Sausages</a></li>
+                    <li><a href="#">Steaks</a></li>
+                    <li><a href="#">our-foods</a></li>
+                </div>
+            </section>
+        </header>
+        <!--end for the header-->
+        <main>
+            <!-- Header for BBQ menu -->
+            <h3 id="title" class="menu-header">BBQs</h3>
+            <!-- Container for menu cards -->
+            <section class="menu-cards-container">
+                <!-- Will be created in javascript -->
+            </section>
+            <div class="paginaton-buttons">
+                <button type="button" class="btn btn-paginate prev-page">
+                    Föregående
+                </button>
+                <button type="button" class="btn btn-paginate next-page">
+                    Nästa
+                </button>
+            </div>
+        </main>
+        <footer>
+            <div class="information">
+                <h3>All States BBQ</h3>
+                <p>Påhittad,32</p>
+                <p>98234 Påhittad</p>
+                <p>Sverige</p>
+            </div>
+
+            <div class="offerings">
+                <div>
+                    <h4>Karriär</h4>
+                    <p>Jobba hos oss</p>
+                    <p>Ansök här</p>
+                    <p>Utbildningar</p>
+                </div>
+                <div>
+                    <h4>Om oss</h4>
+                    <p>Bakgrund</p>
+                    <p>Kundtjänst</p>
+                </div>
+            </div>
+            <div class="support">
+                <h3>Följ våra kanaler</h3>
+                <p>--------------------------------------------</p>
+            </div>
+            <div class="some">
+                <figure>
+                    <img
+                        class="instagram"
+                        src="/assets/instagram.svg"
+                        alt="instagram" />
+                </figure>
+                <figure>
+                    <img
+                        class="facebook"
+                        src="/assets/facebook-filled.svg"
+                        alt="facebook-filled" />
+                </figure>
+            </div>
+        </footer>
+    </body>
+</html>
