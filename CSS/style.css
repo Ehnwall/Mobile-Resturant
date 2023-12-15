@@ -223,7 +223,6 @@
 .btn {
     --_backgroundColor: var(--primary, #ff8400);
     --_textColor: var(--background, #fffaeb);
-
     font-weight: 500;
     padding-inline: 2rem;
     padding-block: 0.6rem;
@@ -240,6 +239,12 @@
 .btn-primary {
     --_backgroundColor: var(--primary);
     --_textColor: var(--background);
+}
+.btn-paginate {
+    --_backgroundColor: var(--accent);
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+    border-radius: 0.25rem;
 }
 /* --------- BUTTON END --------- */
 
@@ -359,17 +364,7 @@ footer p {
 /* ------- FOOTER ENDS ------ */
 
 /* CSS for menu site -- Alvin */
-
-.temporary-navbar {
-    height: 6rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
-    color: white;
-}
-
-.menu-header-each-section {
+.menu-header {
     background-color: var(--primary);
     display: flex;
     justify-content: center;
@@ -383,16 +378,17 @@ footer p {
     margin-inline: 0.5rem;
     display: grid;
     border-radius: 0.2rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
     gap: 1rem;
 }
 
 .menu-card {
+    border-radius: 1rem;
     background-color: var(--secondary);
     padding: 0.5rem;
     position: relative;
 }
-.bbq-menu-card > img {
+.menu-card > img {
     border-radius: 1rem;
     object-fit: cover;
 }
@@ -405,4 +401,10 @@ footer p {
     position: absolute;
     bottom: 1.5rem;
     right: 1.5rem;
+}
+.paginaton-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 0.5rem;
+    margin-block: 1rem;
 }
