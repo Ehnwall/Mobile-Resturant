@@ -278,10 +278,30 @@
     transition: all ease 0.6s;
     scroll-snap-align: start;
     scroll-snap-stop: always;
+    background-color: var(--secondary);
     border-radius: 1rem;
+    padding: 5px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.highlights-content > img {
+    border-radius: 5px;
+    object-fit: contain;
+}
 
+.highlights-text-info {
+    position: relative;
+}
+
+.highlights-text-info > button {
+    position: absolute;
+    width: 6rem;
+    height: 2rem;
+    background-color: var(--primary);
+    border: none;
+    border-radius: 0.3rem;
+    bottom: 0.5rem;
+    right: 1.5rem;
+}
 /* --------- HIGHLIGHTS END --------- */
 /* --------- Om oss start -------*/
 
