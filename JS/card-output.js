@@ -40,7 +40,7 @@ const createCard = (foodInfo) => {
 
     const menuCardRate = document.createElement(`p`);
     const strongRate = document.createElement(`strong`);
-    strongRate.textContent = `Rate: `;
+    strongRate.textContent = `Betyg: `;
     menuCardRate.append(strongRate, foodInfo.rate);
 
     const btnAddToCart = document.createElement(`button`);
