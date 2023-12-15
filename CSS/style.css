@@ -332,7 +332,7 @@
     margin-inline: 0.5rem;
     display: grid;
     border-radius: 0.2rem;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
     gap: 1rem;
 }
 
