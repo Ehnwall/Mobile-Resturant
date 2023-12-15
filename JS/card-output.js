@@ -101,6 +101,7 @@ const categories = document.querySelectorAll('.list-style > li > a');
 for (let category of categories) {
     category.addEventListener('click', () => {
         currentCategory = category.textContent.toLowerCase();
+        currentPage = 1;
         updatePage();
     });
 }
