@@ -363,7 +363,7 @@ body.showCart .cartTab {
 .hero {
     min-height: 100vh;
     display: grid;
-    background-image: url('../assets/hero-background.webp');
+    background-image: url('../assets/Taverna.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -378,7 +378,11 @@ body.showCart .cartTab {
     line-height: 1.2;
     display: grid;
     gap: 0.5rem;
+    padding-block: 0.5rem;
     color: var(--background);
+    background-color: transparent;
+    background-color: var(--primary);
+    opacity: 90%;
 }
 .hero-header--bold {
     font-weight: 900;
@@ -625,6 +629,7 @@ footer p {
     background-color: var(--secondary);
     padding: 0.5rem;
     position: relative;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .menu-card > img {
     border-radius: 1rem;
