@@ -25,17 +25,6 @@
   start for the open and close menu for the cart
  ************************************************************/
 
-.cart-container {
-    width: 100vw;
-    max-width: 60rem;
-    margin: auto;
-    text-align: center;
-    padding-top: 10px;
-    transition: transform 0.5s;
-    padding-top: 30rem;
-    position: sticky;
-}
-
 .listProduct .item img {
     width: 90%;
     filter: drop-shadow(0 50px 20px #0009);
@@ -76,10 +65,25 @@
     position: fixed;
     inset: 0 -400px 0 auto;
     display: grid;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: 20px 60px 1fr 70px;
     transition: 0.5s;
     margin-top: 5rem;
-    padding: 20px 0;
+}
+
+.cartTab h1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Poppins';
+}
+
+.order-here-and-logga {
+    height: 1rem;
+}
+
+.order-here-and-logga img {
+    height: 3.5rem;
+    padding-bottom: 2.3rem;
 }
 
 body.showCart .cartTab {
@@ -87,7 +91,7 @@ body.showCart .cartTab {
 }
 
 .cartTab h1 {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-top: 1rem;
     background-color: var(--primary);
     border-radius: 0.3rem;
@@ -95,17 +99,23 @@ body.showCart .cartTab {
     margin: 0.4rem;
 }
 
+.listCart {
+    margin-top: 2.5rem;
+}
+
 .cartTab .listCart .item img {
-    width: 100%;
+    width: 90%;
+    filter: drop-shadow(0 1.125rem 1.25rem #0009);
 }
 
 .cartTab .listCart .item {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr 1fr;
-    gap: 10px;
+    gap: 0.3rem;
     text-align: center;
     align-items: center;
 }
+
 .listCart,
 .amount,
 .name {
@@ -138,14 +148,24 @@ body.showCart .cartTab {
     width: 0;
 }
 
-.btn-input .table-num {
+.btn-input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.btn-input > div > input {
     width: 3.1rem;
     height: 2.2rem;
     border-radius: 0.3rem;
     background-color: var(--primary);
     color: var(--secondary);
-    text-align: center;
     border: none;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.2rem;
 }
 .order {
     width: 6.1rem;
@@ -155,8 +175,8 @@ body.showCart .cartTab {
     color: var(--secondary);
     font-weight: 600;
     border: none;
-    margin-top: 0, 7rem;
 }
+
 /*************************************************************
   start for the open and close menu style code for the navbar
  ************************************************************/
@@ -285,18 +305,11 @@ body.showCart .cartTab {
         gap: 0.2rem;
         text-align: center;
         align-items: center;
+        margin: 0.3rem;
     }
 
-    .cartTab h1 {
-        font-size: 1.5rem;
-        margin-top: 1rem;
-        background-color: var(--primary);
-        border-radius: 0.3rem;
-        padding: 0.2rem;
-        margin: 0.2rem;
-    }
     .cartTab {
-        height: 36rem;
+        height: 33rem;
         width: 20rem;
     }
 
