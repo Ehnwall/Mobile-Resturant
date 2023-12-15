@@ -614,6 +614,7 @@ footer p {
 
 .menu-cards-container {
     margin-inline: 0.5rem;
+    padding-block: 1rem;
     display: grid;
     border-radius: 0.2rem;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
@@ -645,4 +646,16 @@ footer p {
     justify-content: space-between;
     padding-inline: 0.5rem;
     margin-block: 1rem;
+}
+
+#Menu-select {
+    width: 80%;
+    padding-block: 1rem;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    text-align-last: center;
+    font-weight: 700;
+    font-family: var(--header-font);
+    letter-spacing: 5px;
 }
