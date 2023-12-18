@@ -377,7 +377,7 @@
             <!--END section higligts foods-->
 
             <section class="container-om-oss">
-                <h2 class="om-oss-h2">Om oss</h2>
+                <h2 class="om-oss-h2" id="om-oss">Om oss</h2>
                 <div class="container-omoss-info">
                     <h3>All States BBQ</h3>
                     <div class="container-omoss-p">
@@ -428,20 +428,35 @@
                 <h3>All States BBQ</h3>
                 <p>Infanterivägen,32</p>
                 <p>982 34 Ulricehamn</p>
-                <p>Sverige</p>
+                <p>0501-234698</p>
+                <a href="mailto:someone@example.com"
+                    >support@allstatesbbq.com</a
+                >
             </div>
 
             <div class="offerings">
                 <div>
                     <h4>Karriär</h4>
-                    <p>Jobba hos oss</p>
-                    <p>Ansök här</p>
-                    <p>Utbildningar</p>
+                    <a href="/index.html">
+                        <p>Jobba hos oss</p>
+                    </a>
+                    <a href="index.html">
+                        <p>Ansök här</p>
+                    </a>
+                    <a href="">
+                        <p>Utbildningar</p>
+                    </a>
                 </div>
                 <div>
-                    <h4>Om oss</h4>
-                    <p>Bakgrund</p>
-                    <p>Kundtjänst</p>
+                    <a href="#om-oss">
+                        <h4>Om oss</h4>
+                    </a>
+                    <a href="#om-oss">
+                        <p>Bakgrund</p>
+                    </a>
+                    <a href="index.html">
+                        <p>Kundtjänst</p>
+                    </a>
                 </div>
             </div>
             <div class="support">
@@ -450,16 +465,21 @@
             </div>
             <div class="some">
                 <figure>
-                    <img
-                        class="instagram"
-                        src="/assets/instagram.svg"
-                        alt="instagram" />
+                    <a href="https://www.instagram.com/">
+                        <img
+                            class="instagram"
+                            href="https://www.instagram.com/"
+                            src="/assets/instagram.svg"
+                            alt="instagram" />
+                    </a>
                 </figure>
                 <figure>
-                    <img
-                        class="facebook"
-                        src="/assets/facebook-filled.svg"
-                        alt="facebook-filled" />
+                    <a href="https://www.facebook.com/">
+                        <img
+                            class="facebook"
+                            src="/assets/facebook-filled.svg"
+                            alt="facebook-filled" />
+                    </a>
                 </figure>
             </div>
         </footer>
