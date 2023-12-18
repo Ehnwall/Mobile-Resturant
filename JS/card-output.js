@@ -1,3 +1,5 @@
+import { addToCartListener } from './cartHandler.js';
+
 let currentPage = 1;
 let currentCategory = 'bbqs';
 const amountOfCards = 9;
@@ -69,13 +71,12 @@ const updatePage = () => {
     );
     const cardsContainer = document.querySelector('.menu-cards-container');
     cardsContainer.innerHTML = '';
-    // title.textContent =
-    //     currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1);
 
     for (let food of pageData) {
         const card = createCard(food);
         cardsContainer.appendChild(card);
     }
+    addToCartListener(pageData);
 };
 
 updatePage();
