@@ -20,6 +20,10 @@
 /*************************************************************
   start for the open and close menu for the cart
  ************************************************************/
+.navbar {
+    margin: 0 auto;
+    width: 90vw;
+}
 
 .listProduct .item img {
     width: 90%;
@@ -54,8 +58,8 @@
 }
 
 .cartTab {
-    height: 30rem;
-    width: 20rem;
+    height: 24rem;
+    width: 24rem;
     background-color: #353432;
     color: #eee;
     position: fixed;
@@ -63,7 +67,8 @@
     display: grid;
     grid-template-rows: 20px 60px 1fr 70px;
     transition: 0.5s;
-    margin-top: 5rem;
+    margin-top: 7rem;
+    z-index: 1;
 }
 
 .cartTab h1 {
@@ -154,7 +159,7 @@ body.showCart .cartTab {
 
 .btn-input > div > input {
     width: 3.1rem;
-    height: 2.2rem;
+    height: 2.1rem;
     border-radius: 0.3rem;
     background-color: var(--primary);
     color: var(--secondary);
@@ -165,7 +170,7 @@ body.showCart .cartTab {
 }
 .order {
     width: 6.1rem;
-    height: 2.2rem;
+    height: 2.1rem;
     border-radius: 0.3rem;
     background-color: var(--primary);
     color: var(--secondary);
@@ -181,26 +186,29 @@ body.showCart .cartTab {
     font-family: var(--header-font);
     background: var(--background);
     color: var(--text);
-    padding: 1rem;
+    padding: 0.4rem;
+    margin: 0.4rem;
     margin-bottom: 0.41rem;
 }
 /*home and price in header*/
 .middle-a-links-nav {
+    width: 90vw;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     font-weight: 400;
     top: 0.5rem;
+    margin-left: 0.5rem;
+    padding: 1rem;
 }
 /*Loggan*/
-.middle-a-links-nav img {
+.middle-a-links-nav a img {
     background: var(--primary);
     border-radius: 0.3rem;
-    width: 6rem;
     padding: 0.5rem;
-    height: auto;
-    z-index: 10;
-    position: absolute;
+    z-index: 0;
+    height: 3rem;
+    top: 0.2rem;
 }
 
 .fa-xmark {
@@ -218,31 +226,13 @@ body.showCart .cartTab {
     cursor: pointer;
 }
 
-.menu,
-.pris {
-    letter-spacing: 0.1rem;
-    font-size: 1.4375rem;
-    text-decoration: none;
-}
-
-.pris {
-    margin-right: 3rem;
-}
-
-.menu {
-    margin-left: 3rem;
-}
-
-.pris:hover {
-    color: var(--primary);
-}
 .menu:hover {
     color: var(--primary);
 }
 
 .list-style {
     display: grid;
-    grid-template-columns: repeat(4, 3fr);
+    grid-template-columns: repeat(3, 3fr);
     gap: 1.4em;
     margin: 0.1rem;
 }
@@ -252,8 +242,7 @@ body.showCart .cartTab {
     border-radius: 0.3rem;
     font-family: 'poppins';
     text-decoration: none;
-    color: var(--text);
-    font-size: 0.875rem;
+    font-size: 1.325rem;
     letter-spacing: 0.1rem;
 }
 
@@ -267,24 +256,37 @@ body.showCart .cartTab {
     display: none;
 }
 .toggle-function-menu.open {
-    height: 13rem;
+    height: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     list-style: none;
-    border-radius: 0 0 0.625rem 0.625rem;
-    border-bottom: 0.3rem solid var(--primary);
+    margin-top: 1rem;
 }
 
 @media (min-width: 900px) {
+    .cartTab h4 {
+        font-size: 1.45rem;
+        margin: 0 0.5rem 0 0.5rem;
+    }
     .cartTab {
-        height: 45rem;
+        height: 35rem;
         width: 40rem;
         inset: 0 -900px 0 auto;
     }
 }
-
-@media (max-width: 431px) {
+@media (max-width: 930px) {
+    .cartTab {
+        height: 30rem;
+        width: 30rem;
+        inset: 0 -900px 0 auto;
+    }
+}
+@media (max-width: 415px) {
+    .cartTab h4 {
+        font-size: 1.2rem;
+        margin: 0 0.5rem 0 0.5rem;
+    }
     .list-style {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -293,6 +295,10 @@ body.showCart .cartTab {
     }
 }
 @media (max-width: 376px) {
+    .cartTab h1 {
+        font-size: 1.2rem;
+    }
+
     .cartTab .listCart .item {
         width: 19.6rem;
         display: grid;
@@ -304,29 +310,45 @@ body.showCart .cartTab {
     }
 
     .cartTab {
-        height: 33rem;
-        width: 20rem;
+        height: 32rem;
+        width: 21rem;
+        margin-top: 6rem;
     }
 
     .cartTab h4 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
+        font-size: 1rem;
+        margin: 0 0.5rem 0 0.5rem;
     }
+
     .list-style {
-        display: grid;
         grid-template-columns: repeat(3, 1fr);
         margin: 0 auto;
-        gap: 0.5rem;
+        gap: 1.9rem;
+        margin-left: 5rem;
     }
     .fa-solid {
         color: var(--text);
     }
-    .middle-a-links-nav img {
-        width: 4rem;
-        transition: all 3s ease;
-    }
+
     .list-style li a {
-        font-size: 0.625rem;
+        margin-left: 1.5rem;
+        padding: 0.3rem;
+    }
+    .toggle-function-menu {
+        width: 13rem;
+        margin-left: 1.9rem;
+        height: 3rem;
+    }
+    .toggle-function-menu.open {
+        width: 13rem;
+        margin-left: 1.9rem;
+        height: 3rem;
+    }
+
+    .btn-input {
+        padding: 2rem;
+        height: 1rem;
+        margin-bottom: 0.5rem;
     }
 }
 @media (max-width: 320px) {
@@ -345,9 +367,6 @@ body.showCart .cartTab {
     }
     .fa-xmark {
         margin-right: 5rem;
-    }
-    .middle-a-links-nav img {
-        margin-right: 0.5rem;
     }
 }
 /******************************************************
@@ -574,6 +593,7 @@ footer p {
     display: flex;
     align-items: center;
     flex-direction: column;
+    z-index: -1;
 }
 
 .offerings {
