@@ -83,7 +83,10 @@ const updateCart = () => {
     }
     console.log('SUMMA: ', sum);
 };
-const deleteItem = (itemName) => {};
+const deleteItem = (itemName) => {
+    const itemIndex = cart.findIndex((e) => e.name === itemName);
+    cart.splice(itemIndex, 1);
+};
 
 const addItem = (cartItem) => {
     const existingItem = cart.find((e) => e.name === cartItem.name);
