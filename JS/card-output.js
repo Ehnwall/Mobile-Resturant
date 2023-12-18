@@ -1,9 +1,10 @@
 let currentPage = 1;
-let currentCategory = 'best-foods';
+let currentCategory = 'bbqs';
 const amountOfCards = 9;
 let maxPageination = 0;
 
 const title = document.querySelector('.menu-header');
+const menuSelect = document.getElementById('Menu-select');
 
 const paginate = (array, pageNumber, pageSize) => {
     const startIndex = (pageNumber - 1) * pageSize;
@@ -68,8 +69,8 @@ const updatePage = () => {
     );
     const cardsContainer = document.querySelector('.menu-cards-container');
     cardsContainer.innerHTML = '';
-    title.textContent =
-        currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1);
+    // title.textContent =
+    //     currentCategory.charAt(0).toUpperCase() + currentCategory.slice(1);
 
     for (let food of pageData) {
         const card = createCard(food);
@@ -83,7 +84,7 @@ const nextPageButton = document.querySelector('.next-page');
 nextPageButton.addEventListener('click', () => {
     if (currentPage < maxPageination) {
         currentPage++;
-        document.getElementById('title').scrollIntoView(); //scroll to the top of the page
+        document.getElementById('Menu-select').scrollIntoView(); //scroll to the top of the page
         updatePage();
     }
 });
@@ -92,16 +93,24 @@ const prevPageButton = document.querySelector('.prev-page');
 prevPageButton.addEventListener('click', () => {
     if (currentPage > 1) {
         currentPage--;
-        document.getElementById('title').scrollIntoView(); //scroll to the top of the page
+        document.getElementById('Menu-select').scrollIntoView(); //scroll to the top of the page
         updatePage();
     }
 });
 
-const categories = document.querySelectorAll('.list-style > li > a');
-for (let category of categories) {
-    category.addEventListener('click', () => {
-        currentCategory = category.textContent.toLowerCase();
-        currentPage = 1;
-        updatePage();
-    });
+const allcatagorys = Object.keys(db.pagination);
+
+for (let i = 0; i < allcatagorys.length; i++) {
+    const option = document.createElement('option');
+    option.label =
+        allcatagorys[i].charAt(0).toUpperCase() +
+        allcatagorys[i].slice(1).replace('-', ' ');
+    option.value = allcatagorys[i];
+    menuSelect.append(option);
 }
+
+menuSelect.addEventListener('change', (e) => {
+    currentCategory = e.target.value;
+    currentPage = 1;
+    updatePage();
+});
