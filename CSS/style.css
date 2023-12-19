@@ -69,12 +69,13 @@ html {
     background-color: #353432;
     color: #eee;
     position: fixed;
-    inset: 0 -400px 0 auto;
+    inset: 0 0px 0 auto;
     display: grid;
     grid-template-rows: 20px 60px 1fr 70px;
     transition: 0.5s;
     margin-top: 7rem;
-    z-index: 1;
+    z-index: 2;
+    transform: translate(100%);
 }
 
 .cartTab h1 {
@@ -94,7 +95,7 @@ html {
 }
 
 body.showCart .cartTab {
-    inset: 0 0 0 auto;
+    transform: translate(0);
 }
 
 .cartTab h1 {
@@ -117,7 +118,7 @@ body.showCart .cartTab {
 
 .cartTab .listCart .item {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 2fr;
     gap: 0.3rem;
     text-align: center;
     align-items: center;
@@ -287,38 +288,19 @@ body.showCart .cartTab {
     .cartTab h1 {
         font-size: 1rem;
     }
-    h4 {
-        font-size: 1.1rem;
-    }
-}
-
-@media (min-width: 280px) and (max-width: 320px) {
-    .toggle-function-menu.open {
-        width: 100%;
-        display: inline;
-    }
-    .list-style {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-    }
-    .cartTab {
-        height: 26rem;
-        width: 20rem;
-    }
-    .cartTab h1 {
-        font-size: 1rem;
-    }
-    h4 {
-        font-size: 1rem;
+    h6 {
+        font-size: 1.2rem;
     }
 }
 
 @media (min-width: 321px) and (max-width: 480px) {
+    h6 {
+        font-size: 1.2rem;
+    }
     .toggle-function-menu.open {
         width: 100%;
         display: inline;
+        z-index: 10;
     }
     .list-style {
         display: flex;
@@ -327,13 +309,10 @@ body.showCart .cartTab {
         margin: 0 auto;
     }
     .cartTab {
-        height: 32rem;
-        width: 20rem;
+        height: 30rem;
+        width: 100%;
     }
     .cartTab h1 {
-        font-size: 1rem;
-    }
-    h4 {
         font-size: 1rem;
     }
 }
@@ -351,8 +330,8 @@ body.showCart .cartTab {
         width: 19rem;
         margin-right: 5%;
     }
-    h4 {
-        font-size: 1rem;
+    h6 {
+        font-size: 1.2rem;
     }
 }
 /******************************************************
@@ -493,6 +472,7 @@ body.showCart .cartTab {
     border-radius: 0.3rem;
     bottom: 0.5rem;
     right: 1.5rem;
+    cursor: pointer;
 }
 /* --------- HIGHLIGHTS END --------- */
 /* --------- Om oss start -------*/
