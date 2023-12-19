@@ -65,6 +65,7 @@ const cartHandler = (cardData) => {
         amount: 1,
     };
 };
+
 export const addToCartListener = (pageData) => {
     const addToCartButton = document.querySelectorAll('.btn-add-to-cart');
     for (let i = 0; i < addToCartButton.length; i++) {
@@ -72,9 +73,11 @@ export const addToCartListener = (pageData) => {
             const cartItem = cartHandler(pageData[i]);
             addItem(cartItem);
             updateCart();
+            amountCartUpdate();
         });
     }
 };
+const totalsum = document.querySelector('.cartTab-totalsum');
 
 const updateCart = () => {
     listCart.innerHTML = '';
@@ -83,7 +86,7 @@ const updateCart = () => {
         listCart.appendChild(card);
         adjustCartContent(card);
     }
-    console.log('SUMMA: ', sum.toFixed(2));
+    totalsum.textContent = `Totalsumma: ${sum.toFixed(2)} kr`;
 };
 
 const increaseCartBtn = (itemIndex) => {
@@ -98,10 +101,12 @@ const adjustCartContent = (card) => {
     plus.addEventListener(`click`, () => {
         increaseCartBtn(itemIndex);
         updateCart();
+        amountCartUpdate();
     });
     minus.addEventListener(`click`, () => {
         deleteItem(itemIndex);
         updateCart();
+        amountCartUpdateMinus();
     });
 };
 
@@ -123,4 +128,16 @@ const addItem = (cartItem) => {
         cart.push(cartItem);
     }
     sum += cartItem.price;
+};
+
+let countCart = 0;
+const amountCart = document.querySelector('.amount-cart');
+const amountCartUpdate = () => {
+    countCart++;
+    amountCart.textContent = countCart;
+};
+
+const amountCartUpdateMinus = () => {
+    countCart--;
+    amountCart.textContent = countCart;
 };

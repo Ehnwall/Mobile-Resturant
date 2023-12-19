@@ -107,6 +107,9 @@ for (let i = 0; i < allcatagorys.length; i++) {
         allcatagorys[i].charAt(0).toUpperCase() +
         allcatagorys[i].slice(1).replace('-', ' ');
     option.value = allcatagorys[i];
+    option.textContent =
+        allcatagorys[i].charAt(0).toUpperCase() +
+        allcatagorys[i].slice(1).replace('-', ' ');
     menuSelect.append(option);
 }
 
