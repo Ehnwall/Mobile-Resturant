@@ -20,9 +20,15 @@
 /*************************************************************
   start for the open and close menu for the cart
  ************************************************************/
+html {
+    width: 100%;
+}
+
 .navbar {
-    margin: 0 auto;
-    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
 }
 
 .listProduct .item img {
@@ -187,7 +193,6 @@ body.showCart .cartTab {
     background: var(--background);
     color: var(--text);
     padding: 0.4rem;
-    margin: 0.4rem;
     margin-bottom: 0.41rem;
 }
 /*home and price in header*/
@@ -261,112 +266,93 @@ body.showCart .cartTab {
     justify-content: center;
     align-items: center;
     list-style: none;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
 
-@media (min-width: 900px) {
-    .cartTab h4 {
-        font-size: 1.45rem;
-        margin: 0 0.5rem 0 0.5rem;
-    }
-    .cartTab {
-        height: 35rem;
-        width: 40rem;
-        inset: 0 -900px 0 auto;
-    }
-}
-@media (max-width: 930px) {
-    .cartTab {
-        height: 30rem;
-        width: 30rem;
-        inset: 0 -900px 0 auto;
-    }
-}
-@media (max-width: 415px) {
-    .cartTab h4 {
-        font-size: 1.2rem;
-        margin: 0 0.5rem 0 0.5rem;
+@media (min-width: 480px) {
+    .toggle-function-menu.open {
+        width: 100%;
+        display: inline;
     }
     .list-style {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
-        gap: 0.5rem;
+    }
+    .cartTab {
+        height: 46rem;
+        width: 20rem;
+    }
+    .cartTab h1 {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 1.1rem;
     }
 }
-@media (max-width: 376px) {
-    .cartTab h1 {
-        font-size: 1.2rem;
-    }
 
-    .cartTab .listCart .item {
-        width: 19.6rem;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr 2fr;
-        gap: 0.2rem;
-        text-align: center;
+@media (min-width: 280px) and (max-width: 320px) {
+    .toggle-function-menu.open {
+        width: 100%;
+        display: inline;
+    }
+    .list-style {
+        display: flex;
+        justify-content: center;
         align-items: center;
-        margin: 0.3rem;
+        margin: 0 auto;
     }
+    .cartTab {
+        height: 26rem;
+        width: 20rem;
+    }
+    .cartTab h1 {
+        font-size: 1rem;
+    }
+    h4 {
+        font-size: 1rem;
+    }
+}
 
+@media (min-width: 321px) and (max-width: 480px) {
+    .toggle-function-menu.open {
+        width: 100%;
+        display: inline;
+    }
+    .list-style {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
     .cartTab {
         height: 32rem;
-        width: 21rem;
-        margin-top: 6rem;
+        width: 20rem;
     }
-
-    .cartTab h4 {
+    .cartTab h1 {
         font-size: 1rem;
-        margin: 0 0.5rem 0 0.5rem;
     }
-
-    .list-style {
-        grid-template-columns: repeat(3, 1fr);
-        margin: 0 auto;
-        gap: 1.9rem;
-        margin-left: 5rem;
-    }
-    .fa-solid {
-        color: var(--text);
-    }
-
-    .list-style li a {
-        margin-left: 1.5rem;
-        padding: 0.3rem;
-    }
-    .toggle-function-menu {
-        width: 13rem;
-        margin-left: 1.9rem;
-        height: 3rem;
-    }
-    .toggle-function-menu.open {
-        width: 13rem;
-        margin-left: 1.9rem;
-        height: 3rem;
-    }
-
-    .btn-input {
-        padding: 2rem;
-        height: 1rem;
-        margin-bottom: 0.5rem;
+    h4 {
+        font-size: 1rem;
     }
 }
-@media (max-width: 320px) {
-    .menu,
-    .pris {
-        display: none;
+
+@media (max-width: 280px) {
+    .cartTab h1 {
+        font-size: 1rem;
     }
-    .list-style {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        margin: 0 auto;
-        gap: 0.5rem;
+    .toggle-function-menu.open {
+        width: 100%;
+        display: inline;
     }
-    .fa-solid {
-        font-size: 1.25rem;
+    .cartTab {
+        height: 30rem;
+        width: 19rem;
+        margin-right: 5%;
     }
-    .fa-xmark {
-        margin-right: 5rem;
+    h4 {
+        font-size: 1rem;
     }
 }
 /******************************************************
