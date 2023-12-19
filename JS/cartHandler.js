@@ -79,13 +79,38 @@ export const addToCartListener = (pageData) => {
 const updateCart = () => {
     listCart.innerHTML = '';
     for (let item of cart) {
-        listCart.appendChild(createItem(item));
+        const card = createItem(item);
+        listCart.appendChild(card);
+        adjustCartContent(card);
     }
-    console.log('SUMMA: ', sum);
+    console.log('SUMMA: ', sum.toFixed(2));
 };
-const deleteItem = (itemName) => {
+
+const increaseCartBtn = (itemIndex) => {
+    sum += cart[itemIndex].price;
+    cart[itemIndex].amount++;
+};
+const adjustCartContent = (card) => {
+    const itemName = card.querySelector(`.name`).textContent;
+    const minus = card.querySelector(`.minus`);
+    const plus = card.querySelector(`.plus`);
     const itemIndex = cart.findIndex((e) => e.name === itemName);
-    cart.splice(itemIndex, 1);
+    plus.addEventListener(`click`, () => {
+        increaseCartBtn(itemIndex);
+        updateCart();
+    });
+    minus.addEventListener(`click`, () => {
+        deleteItem(itemIndex);
+        updateCart();
+    });
+};
+
+const deleteItem = (itemIndex) => {
+    sum -= cart[itemIndex].price;
+    cart[itemIndex].amount--;
+    if (cart[itemIndex].amount < 1) {
+        cart.splice(itemIndex, 1);
+    }
 };
 
 const addItem = (cartItem) => {
