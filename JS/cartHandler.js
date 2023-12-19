@@ -83,6 +83,7 @@ const updateCart = () => {
     }
     console.log('SUMMA: ', sum);
 };
+
 const deleteItem = (itemName) => {
     const itemIndex = cart.findIndex((e) => e.name === itemName);
     cart.splice(itemIndex, 1);
