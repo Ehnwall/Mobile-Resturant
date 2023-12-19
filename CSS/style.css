@@ -281,7 +281,7 @@ body.showCart .cartTab {
         margin: 0 auto;
     }
     .cartTab {
-        height: 46rem;
+        height: 36rem;
         width: 20rem;
     }
     .cartTab h1 {
@@ -614,6 +614,9 @@ footer p {
 /* CSS for menu site -- Alvin */
 .menu-header {
     background-color: var(--primary);
+    position: sticky;
+    top: 0;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -651,6 +654,7 @@ footer p {
     position: absolute;
     bottom: 1.5rem;
     right: 1.5rem;
+    cursor: pointer;
 }
 .paginaton-buttons {
     display: flex;
@@ -669,4 +673,5 @@ footer p {
     font-weight: 700;
     font-family: var(--header-font);
     letter-spacing: 5px;
+    color: black;
 }
