@@ -671,3 +671,26 @@ footer p {
     letter-spacing: 5px;
     color: black;
 }
+
+.ordercheckout-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    min-height: 80vh;
+    font-size: 2.5rem;
+}
+
+.ordercheckout-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50vh;
+    aspect-ratio: 1/1;
+    width: 5rem;
+    background-color: #a7c957;
+}
+.ordercheckout-container > h2 {
+    font-size: 1.5rem;
+}
